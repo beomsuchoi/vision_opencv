@@ -8,11 +8,11 @@ sudo apt remove ros-humble-cv-bridge
 cd ~/ros2_ws/src
 git clone https://github.com/ros-perception/vision_opencv.git -b humble
 
-# 3. OpenCV 4.10.0 경로 설정
+# 3. OpenCV 4.XX.0 경로 설정
 export OpenCV_DIR=/usr/local/lib/cmake/opencv4
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 
-# 4. cv_bridge를 OpenCV 4.10.0용으로 재빌드
+# 4. cv_bridge를 OpenCV 4.XX.0용으로 재빌드 (현재 4.10.0 쓰는 중)
 cd ~/ros2_ws
 colcon build --packages-select cv_bridge --cmake-args -DCMAKE_BUILD_TYPE=Release
 
